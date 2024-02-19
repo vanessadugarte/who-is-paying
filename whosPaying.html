@@ -7,7 +7,6 @@
     <meta name="keywords" content="almuerzo, amigos, sorteo, azar, random">
     <title>WhosPaying</title>
     <link rel="icon" href="images/whospaying.svg" type="image/png" />
-    <link rel="stylesheet" href="css/index.css"/>
 </head>
 <body>
     <section class="description">
@@ -24,24 +23,26 @@
     <section class="inputs">
 
         <article class="input_nombre">
-        <input
-          class="input"
-          type="text"
-          id="idnombre"
-          name="nombre"
-          placeholder="Nombre"
-          required
-        />
+          <input
+            class="input"
+            type="text"
+            id="idnombre"
+            name="nombre"
+            placeholder="Nombre"
+            required
+          />
 
-        <a href="#"><img src="./images/editar.svg" alt="icono editar" class="editar"></a>
-        <a href="#"><img src="./images/eliminar.svg" alt="icono eliminar" class="eliminar"></a>
+
+          <button class="boton_anadir" onclick="obtenerNombre()">Añadir</button>
+
+          <button class="boton_sorteo" onclick="seleccionarVictima()">Sorteo</button>
+      
+
         </article>
      
-        
+       
 
-       <button class="boton_anadir" onclick="obtenerNombre()">Añadir</button>
-
-       <button class="boton_sorteo" onclick="seleccionarVictima()">Sorteo</button>
+       
     </section>
 
     
@@ -49,5 +50,6 @@
       <div class="organic-shape2"></div>
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="./js/whosPaying.js"></script>
+      <link rel="stylesheet" href="css/index.css"/>
 </body>
 </html>
