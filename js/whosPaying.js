@@ -33,6 +33,9 @@ function obtenerNombre() {
         eliminarA.onclick=function(){
             eliminarVictima(victima.id);
         };
+        editarA.onclick=function(){
+            editarVictima(victima.id);
+        };
         editarImg.classList.add("editar_js")
         eliminarImg.classList.add("eliminar_js")
         input.value = victima.nombre;
@@ -62,6 +65,21 @@ function eliminarVictima(id){
     actualizar();
 }
 
+function editarVictima(id){
+   let nuevoNombre = prompt("Ingresa el nuevo nombre");
+   let nuevoArray = victimas.map(el=>{
+    if(el.id === id){
+     return {
+        id : el.id, nombre : nuevoNombre
+     }
+    } else {
+        return el
+    }
+   }) 
+   victimas = nuevoArray
+   actualizar();
+}
+
 function actualizar() {
     let lista = document.getElementById('listaVictimas');
     while(lista.firstChild){
@@ -83,6 +101,9 @@ function actualizar() {
         eliminarA.onclick=function(){
             eliminarVictima(victima.id);
         };
+        editarA.onclick=function(){
+            editarVictima(victima.id);
+        };
         lista.appendChild(padreInput);
         padreInput.appendChild(input);
         editarA.href="#";
@@ -98,6 +119,8 @@ function actualizar() {
 
         
     })
+
+    
 }
 
 
@@ -107,6 +130,6 @@ function seleccionarVictima() {
     let entero = Math.floor(random);
     let victimaGanadora = victimas[entero];
 
-    alert(`${victimaGanadora} pagará el almuerzo el día de hoy`);
+    alert(`${victimaGanadora.nombre} pagará el almuerzo el día de hoy`);
 
 }
