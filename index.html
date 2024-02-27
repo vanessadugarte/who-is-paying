@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="¡Realiza un sorteo entre tus amigos para saber quien pagará el almuerzo hoy!">
+    <meta name="keywords" content="almuerzo, amigos, sorteo, azar, random">
+    <title>WhosPaying</title>
+    <link rel="icon" href="images/faviconwhos.png" type="image/png" />
+</head>
+<body>
+    <section class="description">
+        <h1 class="h1">Who's paying today?</h1>
+        <p class="p"> ¡Haz un sorteo y elige quien pagará el almuerzo el día de hoy!</p>
+    </section>
+
+    <section class="victimasContainer">
+     <div id="listaVictimas" class="divVictimas">
+      
+      </div>
+    </section>
+
+    <section class="inputs">
+
+        <article class="input_nombre">
+          <input
+            class="input"
+            type="text"
+            id="idnombre"
+            name="nombre"
+            placeholder="Nombre"
+            required
+          />
+
+
+          <button class="boton_anadir" onclick="obtenerNombre()">Añadir</button>
+
+          <button class="boton_sorteo" onclick="seleccionarVictima()">Sorteo</button>
+      
+
+        </article>
+     
+       
+
+       
+    </section>
+
+    
+    <div class="organic-shape"></div>
+      <div class="organic-shape2"></div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="./js/whosPaying.js"></script>
+      <link rel="stylesheet" href="css/index.css"/>
+</body>
+</html>
